@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter",
+  title: "GroupChat Convex Starter",
   description: "Everything you need to ship something",
 };
 

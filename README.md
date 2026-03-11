@@ -1,4 +1,4 @@
-# Starter
+# GroupChat Convex Starter
 
 Everything you need to ship something. Built with [Convex](https://convex.dev) (backend, database, auth), [Next.js](https://nextjs.org) (frontend), and [Resend](https://resend.com) (transactional email).
 

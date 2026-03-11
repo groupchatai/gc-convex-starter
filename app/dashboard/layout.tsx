@@ -34,7 +34,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         <Sidebar>
           <SidebarHeader className="px-4 py-3">
             <span className="text-sm font-semibold tracking-tight">
-              Starter
+              GroupChat Convex Starter
             </span>
           </SidebarHeader>
           <SidebarContent>
