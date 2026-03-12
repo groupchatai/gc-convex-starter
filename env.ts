@@ -2,11 +2,6 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
-  server: {
-    CONVEX_DEPLOYMENT: z
-      .string()
-      .min(1, "Run `npx convex dev` to set up your Convex project"),
-  },
   client: {
     NEXT_PUBLIC_CONVEX_URL: z
       .string()

@@ -13,34 +13,42 @@ Auth, email, and a dashboard shell are already wired up — just describe what y
 ## Setup
 
 1. **Clone and install**
-
-   ```bash
+  ```bash
    git clone https://github.com/la-agency/gc-convex-starter.git my-project
    cd my-project
    pnpm install
-   ```
-
+  ```
    Replace `my-project` with whatever you want to name your project. Git creates the folder and clones into it.
-
 2. **Set up Convex**
-
-   ```bash
+  ```bash
    npx convex dev --once
-   ```
-
+  ```
    This creates your Convex project and generates `.env.local` with `CONVEX_DEPLOYMENT`, `NEXT_PUBLIC_CONVEX_URL`, and `NEXT_PUBLIC_CONVEX_SITE_URL`.
-
 3. **Run**
-
-   ```bash
+  ```bash
    pnpm dev
-   ```
-
+  ```
    This starts both the Next.js dev server and Convex dev server together.
-
 4. **Open** [http://localhost:3000](http://localhost:3000) and sign up.
 
 Sign up and sign in work out of the box. Password reset requires email — see below.
+
+## Deploy to Vercel
+
+The `build` script already includes `npx convex deploy`, so Vercel just needs the right environment variables.
+
+1. **Push your repo to GitHub** and create a new project at [vercel.com/new](https://vercel.com/new), linking it to your repo.
+
+2. **Get your production deploy key** — in the [Convex dashboard](https://dashboard.convex.dev), go to your project's Settings and click *Generate Production Deploy Key*. Copy it.
+
+3. **Add environment variables in Vercel** (Settings > Environment Variables):
+
+   | Variable | Value | Environment |
+   |---|---|---|
+   | `CONVEX_DEPLOY_KEY` | The deploy key from step 2 | Production only |
+   | `NEXT_PUBLIC_CONVEX_SITE_URL` | Your production `.convex.site` URL (shown in the Convex dashboard under URL & Deploy Key) | Production |
+
+4. **Deploy** — click Deploy in Vercel, or just push to your main branch. Vercel will automatically deploy both Convex and your site on every push.
 
 ## Password reset (optional)
 
