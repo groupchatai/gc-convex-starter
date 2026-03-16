@@ -24,6 +24,8 @@ Auth, email, and a dashboard shell are already wired up — just describe what y
    npx convex dev --once
   ```
    This creates your Convex project and generates `.env.local` with `CONVEX_DEPLOYMENT`, `NEXT_PUBLIC_CONVEX_URL`, and `NEXT_PUBLIC_CONVEX_SITE_URL`.
+
+   > **Important:** When prompted, choose to **create a new Convex account** (or sign in to an existing one). Do **not** select the option to continue without an account — you'll need a linked account later to generate deploy keys and set up preview branches.
 3. **Set up auth**
   ```bash
    npx @convex-dev/auth
