@@ -14,7 +14,7 @@ Auth, email, and a dashboard shell are already wired up — just describe what y
 
 1. **Clone and install**
   ```bash
-   git clone https://github.com/la-agency/gc-convex-starter.git my-project
+   git clone https://github.com/groupchatai/gc-convex-starter.git my-project
    cd my-project
    pnpm install
   ```
