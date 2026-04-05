@@ -6,7 +6,10 @@
     "dev": "concurrently --names convex,next --prefix-colors blue,green \"npx convex dev\" \"next dev\"",
     "build": "npx convex deploy --cmd 'next build'",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "biome check .",
+    "lint:fix": "biome check --fix .",
+    "format": "biome format --write .",
+    "check": "biome check --fix ."
   },
   "dependencies": {
     "@auth/core": "0.37.0",
@@ -29,12 +32,11 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.4.10",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
     "jose": "^6.2.1",
     "tailwindcss": "^4",
     "typescript": "^5"
